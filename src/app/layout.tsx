@@ -24,9 +24,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
       >
+        <img
+          src="/wiseshield-logo.png"
+          alt="WiseShield Logo"
+          className="fixed top-(2px) left-(2px) w-32 h-32 z-50 drop-shadow-lg"
+        />
         {children}
       </body>
     </html>

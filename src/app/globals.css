@@ -24,3 +24,80 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.font-bitcount-custom {
+  font-family: "Bitcount Single", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+}
+
+.animated-arrow-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #000000;
+  background-color: #ffffff;
+  border: 3px solid #14b8a6; /* teal border */
+  border-radius: 9999px;
+  cursor: pointer;
+  overflow: visible;
+  transition: all 0.4s ease;
+  min-width: 200px;
+}
+
+.animated-arrow-button .button-text {
+  position: relative;
+  z-index: 2;
+  transition: all 0.4s ease;
+  order: 1;
+}
+
+.animated-arrow-button .button-arrow {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #14b8a6; /* teal circle */
+  border-radius: 50%;
+  color: white;
+  transition: all 0.4s ease;
+  order: 2;
+}
+
+/* Hover state */
+.animated-arrow-button:hover {
+  border-color: #eab308; /* yellow border */
+}
+
+.animated-arrow-button:hover .button-text {
+  order: 2;
+}
+
+.animated-arrow-button:hover .button-arrow {
+  background-color: #eab308; /* yellow circle */
+  order: 1;
+}
+
+.animated-arrow-button:active {
+  transform: scale(0.98);
+}
