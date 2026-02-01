@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function FinalCTA() {
   return (
-    <section className="min-h-screen flex flex-col justify-center py-20 bg-gradient-to-br from-blue-600 via-blue-500 to-green-600 text-white">
+    <section className="py-16 md:py-20 flex flex-col justify-center bg-gradient-to-br from-blue-600 via-blue-500 to-green-600 text-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -40,20 +40,20 @@ export default function FinalCTA() {
           className="mt-12 flex flex-wrap justify-center gap-6 items-center text-sm"
         >
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
               ✓
             </div>
             <span>Free Forever</span>
           </div>
 
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
               ✓
             </div>
             <span>99.2% Detection Rate</span>
           </div>
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center">
               ✓
             </div>
             <span>Privacy First Approach</span>

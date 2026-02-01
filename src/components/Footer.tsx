@@ -7,38 +7,38 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-white text-gray-900 py-12 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-green-400 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold">W</span>
               </div>
-              <span className="text-lg font-bold">WiseShield</span>
+              <span className="text-lg font-bold text-gray-900">WiseShield</span>
             </div>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-600 text-sm">
               AI-powered phishing protection for a safer web.
             </p>
           </div>
 
           {/* Product */}
           <div>
-            <h3 className="font-semibold mb-4">Product</h3>
-            <ul className="space-y-2 text-gray-400 text-sm">
+            <h3 className="font-semibold mb-4 text-gray-900">Product</h3>
+            <ul className="space-y-2 text-gray-600 text-sm">
               <li>
-                <Link href="/download" className="hover:text-white transition">
+                <Link href="/download" className="hover:text-blue-600 transition">
                   Download
                 </Link>
               </li>
               <li>
-                <Link href="/how-it-works" className="hover:text-white transition">
+                <Link href="/how-it-works" className="hover:text-blue-600 transition">
                   How It Works
                 </Link>
               </li>
               <li>
-                <a href="https://chrome.google.com/webstore" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
+                <a href="https://chrome.google.com/webstore" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
                   Extension Store
                 </a>
               </li>
@@ -47,20 +47,20 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h3 className="font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2 text-gray-400 text-sm">
+            <h3 className="font-semibold mb-4 text-gray-900">Resources</h3>
+            <ul className="space-y-2 text-gray-600 text-sm">
               <li>
-                <Link href="/blog" className="hover:text-white transition">
+                <Link href="/blog" className="hover:text-blue-600 transition">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-white transition">
+                <Link href="/about" className="hover:text-blue-600 transition">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-white transition">
+                <Link href="/contact" className="hover:text-blue-600 transition">
                   Contact
                 </Link>
               </li>
@@ -69,33 +69,33 @@ export default function Footer() {
 
           {/* Newsletter */}
           <div>
-            <h3 className="font-semibold mb-4">Newsletter</h3>
-            <p className="text-gray-400 text-sm mb-3">
+            <h3 className="font-semibold mb-4 text-gray-900">Newsletter</h3>
+            <p className="text-gray-600 text-sm mb-3">
               Security tips and product updates.
             </p>
             <div className="flex">
               <input
                 type="email"
                 placeholder="your@email.com"
-                className="flex-1 px-3 py-2 bg-gray-800 text-white rounded-l-lg text-sm outline-none"
+                className="flex-1 px-3 py-2 bg-gray-100 text-gray-900 rounded-l-lg text-sm outline-none border border-gray-300"
               />
-              <button className="px-4 py-2 bg-blue-600 rounded-r-lg text-sm font-semibold hover:bg-blue-700 transition">
+              <button className="px-4 py-2 bg-blue-600 rounded-r-lg text-sm font-semibold text-white hover:bg-blue-700 transition">
                 Subscribe
               </button>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8">
+        <div className="border-t border-gray-200 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">
+            <div className="text-gray-600 text-sm mb-4 md:mb-0">
               <p>&copy; {currentYear} WiseShield AI. All rights reserved.</p>
               <p className="mt-2">
-                <Link href="/privacy" className="hover:text-white transition">
+                <Link href="/privacy" className="hover:text-blue-600 transition">
                   Privacy Policy
                 </Link>
                 {' • '}
-                <Link href="/terms" className="hover:text-white transition">
+                <Link href="/terms" className="hover:text-blue-600 transition">
                   Terms of Service
                 </Link>
               </p>
@@ -103,16 +103,16 @@ export default function Footer() {
 
             {/* Social Links */}
             <div className="flex space-x-6">
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition">
                 <FiTwitter size={20} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition">
                 <FiLinkedin size={20} />
               </a>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition">
                 <FiGithub size={20} />
               </a>
-              <a href="mailto:support@wiseshield.ai" className="text-gray-400 hover:text-white transition">
+              <a href="mailto:support@wiseshield.ai" className="text-gray-600 hover:text-blue-600 transition">
                 <FiMail size={20} />
               </a>
             </div>
