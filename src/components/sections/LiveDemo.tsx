@@ -28,24 +28,23 @@ export default function LiveDemo() {
       // Send URL to backend for analysis
       const response = await sendURLAnalysisToBackend(demoUrl);
       
-      // Map backend response to UI format
+      // Map FastAPI backend response to UI format
       let status = 'Safe';
       let risk = 'No threats detected';
       let color = 'green';
 
-      const riskLevel = response.risk_level?.toLowerCase();
-      
-      if (riskLevel === 'high' || response.is_phishing) {
+      // Backend returns: is_safe, prediction, risk_level, recommendation
+      if (!response.is_safe || response.risk_level?.toLowerCase() === 'high') {
         status = 'Dangerous';
-        risk = 'Phishing attempt detected';
+        risk = response.recommendation || 'Phishing attempt detected';
         color = 'red';
-      } else if (riskLevel === 'medium') {
+      } else if (response.risk_level?.toLowerCase() === 'medium') {
         status = 'Suspicious';
-        risk = 'Potential phishing or malicious content';
+        risk = response.recommendation || 'Potential phishing or malicious content';
         color = 'yellow';
-      } else if (riskLevel === 'low') {
+      } else {
         status = 'Safe';
-        risk = 'No threats detected';
+        risk = response.recommendation || 'No threats detected';
         color = 'green';
       }
 
@@ -53,7 +52,7 @@ export default function LiveDemo() {
       
     } catch (error) {
       console.error('Analysis failed:', error);
-      setError(error instanceof Error ? error.message : 'Failed to analyze URL. Please check if the backend is running.');
+      setError(error instanceof Error ? error.message : 'Failed to analyze URL. Please check if the backend is running on port 8000.');
       
       // Fallback to simple heuristic check if backend fails
       const isPhishing = demoUrl.includes('paypa1') || demoUrl.includes('verify') || demoUrl.length > 50;
