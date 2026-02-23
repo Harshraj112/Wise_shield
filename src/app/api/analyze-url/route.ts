@@ -46,14 +46,18 @@ export async function POST(request: NextRequest) {
     console.log('[API] Backend response:', result);
 
     // Return the response from FastAPI backend
-    // The backend already returns: url, is_safe, prediction, risk_level, features_extracted, recommendation
+    // The backend already returns: url, is_safe, prediction, risk_level, safe_confidence, phishing_confidence, recommendation
     return NextResponse.json({
       url: result.url,
       is_safe: result.is_safe,
       prediction: result.prediction,
       risk_level: result.risk_level,
-      is_phishing: !result.is_safe, // Convert is_safe to is_phishing for frontend compatibility
-      confidence: result.is_safe ? 0.95 : 0.85, // Approximate confidence
+      is_phishing: !result.is_safe,
+      safe_confidence: result.safe_confidence,       // real ML % e.g. 93.8
+      phishing_confidence: result.phishing_confidence, // real ML % e.g. 6.2
+      confidence: result.is_safe
+        ? result.safe_confidence / 100
+        : result.phishing_confidence / 100,
       features_used: result.features_extracted,
       recommendation: result.recommendation,
       timestamp: new Date().toISOString(),
