@@ -2,6 +2,7 @@
 
 import { motion, useMotionValue, useTransform, useSpring } from 'framer-motion';
 import { FiShield, FiClock, FiZap } from 'react-icons/fi';
+import Link from 'next/link';
 
 export default function Hero() {
   const x = useMotionValue(0);
@@ -65,8 +66,9 @@ export default function Hero() {
               WiseShield AI stops phishing attacks before they happen. Real-time protection powered by machine learning. 99.2%(XGBOOST) detection rate.
             </p>
 
-            {/* Try It Now Button */}
-            <motion.div variants={itemVariants} className="mb-6">
+            {/* Buttons Row */}
+            <motion.div variants={itemVariants} className="mb-6 flex flex-wrap gap-4 items-center">
+              {/* Try It Now */}
               <button 
                 onClick={() => {
                   const demoSection = document.querySelector('#live-demo');
@@ -83,6 +85,21 @@ export default function Hero() {
                   </svg>
                 </span>
               </button>
+
+              {/* Try Our Extension */}
+              <Link
+                href="/download"
+                className="group inline-flex items-center justify-between gap-4 px-6 py-3 bg-white border-3 border-violet-500 rounded-full font-semibold text-lg text-black transition-all duration-500 ease-in-out hover:border-purple-400 min-w-[280px] overflow-hidden cursor-pointer"
+              >
+                <span className="whitespace-nowrap transition-all duration-500 ease-in-out group-hover:translate-x-[70px]">
+                  Try Our Extension
+                </span>
+                <span className="flex-shrink-0 flex items-center justify-center w-10 h-10 bg-violet-500 rounded-full text-white transition-all duration-500 ease-in-out group-hover:bg-purple-500 group-hover:translate-x-[-185px]">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 4v4m0 0a4 4 0 110 8 4 4 0 010-8zm-6 4h1m10 0h1M6.34 6.34l.7.7m10.02-.7l-.7.7M6.34 17.66l.7-.7m10.02.7l-.7-.7" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                  </svg>
+                </span>
+              </Link>
             </motion.div>
             {/* Additional Info */}
             <motion.p className="mt-6 text-gray-500 text-sm" variants={itemVariants}>

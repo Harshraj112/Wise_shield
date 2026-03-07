@@ -56,9 +56,9 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center space-x-4">
             <button className="btn btn-outline">Sign In</button>
-            <a href="https://chrome.google.com/webstore" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            <Link href="/download" className="btn btn-primary">
               Add Extension
-            </a>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -92,9 +92,9 @@ export default function Navbar() {
             <Link href="/contact" className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">
               Contact
             </Link>
-            <a href="https://chrome.google.com/webstore" target="_blank" rel="noopener noreferrer" className="block w-full text-left px-3 py-2 rounded-md btn btn-primary">
+            <Link href="/download" className="block w-full text-left px-3 py-2 rounded-md btn btn-primary">
               Add Extension
-            </a>
+            </Link>
           </div>
         </div>
       )}

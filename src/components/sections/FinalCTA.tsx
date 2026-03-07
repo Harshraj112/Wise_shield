@@ -18,7 +18,7 @@ export default function FinalCTA() {
 
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a href="https://chrome.google.com/webstore" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold text-lg hover:bg-blue-50 transition shadow-lg">
+            <a href="/download" className="px-8 py-4 bg-white text-blue-600 rounded-lg font-bold text-lg hover:bg-blue-50 transition shadow-lg">
               Add Extension - Free Forever
             </a>
             <button className="px-8 py-4 border-2 border-white text-white rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition">
