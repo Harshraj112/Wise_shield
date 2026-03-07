@@ -123,6 +123,9 @@ export default function LiveDemo() {
             Try It <span className="text-gradient">Yourself</span>
           </h2>
           <p className="text-xl text-gray-600">Paste any URL and see our AI detect threats instantly</p>
+          <p className="mt-3 text-sm text-amber-600 bg-amber-50 border border-amber-200 rounded-lg px-4 py-2 inline-block">
+            ⚠️ <strong>Note:</strong> The backend may take a moment to wake up on first use — if the result seems off, please try again for accurate results.
+          </p>
         </motion.div>
 
         <motion.div
